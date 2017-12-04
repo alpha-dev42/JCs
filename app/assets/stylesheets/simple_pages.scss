@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  padding-top: 51px;
+}
 .logo {
   height: 51px;
   width: 120px;;
@@ -11,6 +14,11 @@
   background-color: #a5c0c0;
 }
 
+.homepageproduct {
+  height: 300px;
+  width: 400px;
+}
+
 .index h1 {
 	text-align: center;
 	font-size: 3em;
@@ -18,6 +26,12 @@
 	text-transform: uppercase;
 	color: black;
 } 
+
+.index h2 {
+  text-align: center;
+  font-family: 'Open Sans', 'Della Respira';
+  color: #c55f1f;
+}
 
 .about{
 	font-size: 10px;
@@ -29,7 +43,6 @@
 	font-weight: 900;
 	font-family: 'Open Sans', 'Della Respira';
   color: #c55f1f;
-  text-align: center;
 }
 
 .header p {
@@ -38,18 +51,15 @@
 	color: black;
 }
 
-
 .image h1{
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 500;
   color:black
 }
 
 .image h2 {
   color:black;
 }
-
-
 
  .jumbotron {
     background-image: url("sunset.jpeg");
@@ -60,6 +70,7 @@
     padding-top: 50px;
     height: 100%;
 }
+
  @media screen and (max-width: 767px) {
     h2 {
     font-size: 0.8em;
@@ -77,17 +88,7 @@
   color:white;
 }  
  
-.fot{
-  text-align: center;
-  font-size:20px
-}
 
-.store h2{                                                               
-  font-family: 'Open Sans','Della Respira';
-  color: #c55f1f;
-  text-align: center;
-  padding: 30px 0 20px;
-}
 
 
 
