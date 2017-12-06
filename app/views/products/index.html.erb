@@ -7,18 +7,18 @@
     <div class="col-md-12 col-sm-12 colxs-12 column productbox">
     <% products.each do |product| %>
       <div class="col-md-3 col-sm-4 colxs-12" data-mh="each-product">
-        <%= image_tag(product.image_url, class: "img-responsive") %>
+         <div class="productdesc"><%= image_tag(product.image_url, class: 'img-responsive product-image', data: {mh: 'product-image'}) %></div>
         <div class="producttitle"><%= link_to product.name, product, data: {mh: 'product-name'} %></div>
-        <%= image_tag(product.image_url, class: 'img-responsive', data: {mh: 'product-image'}) %>
-        <div class="productdesc"><p data-mh="product-description"><%= product.description %></p></div>
+        <div class="product-desc"><p data-mh="product-description"><%= product.description %></p></div>
         <div class="productprice"><p class="product-price" data-mh="product-price">$<%= product.price %></p></div>
         <div class="product-desc"> <p class="productdesc" data-mh="product-color"><%= product.color %></p></div> 
-        <p class="productdesc"><%= link_to 'Edit', edit_product_path(product) %>  <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p class="product-desc"><%= link_to 'Edit', edit_product_path(product) %>  <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </div>
   <% end %>
       </div>
     </div>
   </div>
 <% end %>
-
+<br>
+<br>
 <%= link_to 'New Product', new_product_path %>
