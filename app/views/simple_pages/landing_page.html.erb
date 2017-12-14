@@ -1,6 +1,8 @@
 <h2>Featured Product:</h2>
-<%= @featured_product.image_url %>
-<%= @featured_product.name %>
-<%= @featured_product.description %>
-<%= @featured_product.price %>
-<%= @featured_product.colour %>
+<%= image_tag(@featured_product.image_url, class: 'img-responsive product-image')  %> </br>
+<div class="product-desc">
+<%= @featured_product.name  %> </br>
+<%= @featured_product.description  %> </br>
+<%= @featured_product.price  %> </br>
+<%= @featured_product.colour %> </br>
+</div>
