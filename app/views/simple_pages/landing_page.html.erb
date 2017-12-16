@@ -1,3 +1,2 @@
 <h2>Featured Product:</h2>
-<%= @featured_product.name  %>
-
+	<%@featured_product.name if Product.exists?(2)%>
