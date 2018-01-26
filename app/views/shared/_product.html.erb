@@ -2,8 +2,9 @@
  
   <% @products.each do |product| %>
     <div class="col-sm-2 col-md-4">
-      <h1><%= link_to product.name, product %></h1>
-      <p><%= product.description %></p>
-      <strong>$ <%= product.price %></strong>
+       <strong><div class="producttitle"><%= link_to product.name, product, data: {mh: 'product-name'} %></div></strong>
+      <div class="product-desc"><p data-mh="product-description"><%= product.description %></p></div>
+      <%= image_tag(product.image_url, class: 'img-responsive product-image', data: {mh: 'product-image'}) %>
+      <div class="productprice"><p class="product-price" data-mh="product-price">$<%= product.price %></p></div>
     </div><!-- /col -->
   <% end %> 
