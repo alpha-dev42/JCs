@@ -1,12 +1,20 @@
-<div class="row">
-  <% @orders.each do |order| %>
-    <div class="col-sm-1 col-md-1">
-      <h1>
-        Order # <%= order.id %>:
-        <%= link_to order.product.name, order.product %>
-      </h1>
-      <p><%= order.product.description %></p>
-      <strong>$ <%= order.product.price %></strong>
-    </div><!-- /col-->
-  <% end %>
-</div><!--row-->
+div class="container" id="order-info">
+
+<h2>orders</h2>
+  <p>Order Information</p>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>product id</th>
+        <th>total</th>
+
+      </tr>
+    </thead>
+      <tr>
+        <td><%= @order.product_id %>
+        <td><%= @order.total %></td>
+        <td><%= link_to 'Back', orders_path %></td>
+      </tr>
+  </table>
+</div>
+
