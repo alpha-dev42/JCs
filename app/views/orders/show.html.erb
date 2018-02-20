@@ -1,20 +1,30 @@
-div class="container" id="order-info">
-
+<div class="container" id="order-info">
 <h2>orders</h2>
   <p>Order Information</p>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>product id</th>
-        <th>total</th>
+  <p>
+    <strong>Order ID:</strong>
+    <%= @order.id %>
+  </p>
 
-      </tr>
-    </thead>
-      <tr>
-        <td><%= @order.product_id %>
-        <td><%= @order.total %></td>
-        <td><%= link_to 'Back', orders_path %></td>
-      </tr>
-  </table>
+  <p>
+    <strong>Product Name:</strong>
+    <%= @order.product.description %>
+  </p>
+
+  <p>
+    <strong>Unit Price:</strong>
+    <%= @order.product.price %>
+  </p>
+
+  <p>
+    <strong>Total Price:</strong>
+    <%= @order.total %>
+  </p>
+
+  <p>
+    <strong>Order Unit:</strong>
+    <%= (@order.total/@order.product.price).round %>
+  </p>
+
+<%= link_to 'Back', orders_path %>
 </div>
-
