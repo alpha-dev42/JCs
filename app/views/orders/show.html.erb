@@ -16,15 +16,5 @@
     <%= @order.product.price %>
   </p>
 
-  <p>
-    <strong>Total Price:</strong>
-    <%= @order.total %>
-  </p>
-
-  <p>
-    <strong>Order Unit:</strong>
-    <%= (@order.total/@order.product.price).round %>
-  </p>
-
 <%= link_to 'Back', orders_path %>
 </div>
