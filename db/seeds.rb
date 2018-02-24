@@ -8,5 +8,5 @@
 
 # Product.create(name: "seed-generated product", description: "I also created this product without using the HTML form!")
 
-Order.create(order id:1, user_id: 1, product_id: 1, total: 10.0)
-Order.create(order id:2, user_id: 2, product_id: 1, total: 5.0)
+Order.create(user_id: 1, product_id: 1, total: 10.0)
+Order.create(user_id: 2, product_id: 1, total: 5.0)
