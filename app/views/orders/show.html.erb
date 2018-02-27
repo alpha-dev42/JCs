@@ -1,9 +1,25 @@
 <div class="container" id="order-info">
 <h2>orders</h2>
   <p>Order Information</p>
+  <p>
+  <strong>Order ID:</strong>
+  <%= @order.id %>
+  </p>
+
+  <p>
     <strong>Product Name:</strong>
-    <%= @order.user_id %>
-   <!-- <strong>Unit Price:</strong>
-    <%= @order.product.price %> -->
+    <%= @order.product.description %>
+  </p>
+
+  <p>
+    <strong>Unit Price:</strong>
+    <%= @order.product.price %>
+  </p>
+
+  <p>
+    <strong>Total Price:</strong>
+    <%= @order.total %>
+  </p>
+
   <%= link_to 'Back', orders_path %>
 </div>

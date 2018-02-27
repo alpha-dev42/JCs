@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
 	
+  before_action :set_order, only: [:show, :edit, :update, :destroy]
+
   def index
       @orders = Order.includes(:product).all
   end
@@ -36,6 +38,6 @@ private
   end
 
   def order_params
-    params.require(:order).permit(:product_id, :total)
+    params.require(:order).permit(:order_id, :product_id, :total)
   end
 end
