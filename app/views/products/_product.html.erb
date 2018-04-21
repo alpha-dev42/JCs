@@ -4,7 +4,7 @@
     <div class="col-sm-2 col-md-4">
        <strong><div class="producttitle"><%= link_to product.name, product, data: {mh: 'product-name'} %></div></strong>
       <div class="product-desc"><p data-mh="product-description"><%= product.description %></p></div>
-      <div class="productimage image-responsive product-image"> <%= image_tag product.image_url unless product.image_url.blank? %>
+      <div class="image-responsive product-image"> <%= image_tag product.image_url unless product.image_url.blank? %>
       </div>
       <div class="productprice"><p class="product-price" data-mh="product-price">$<%= product.price %></p></div>
     </div><!-- /col -->

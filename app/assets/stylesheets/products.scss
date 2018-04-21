@@ -4,7 +4,11 @@
 
 body {
   font-family: 'PT Sans', sans-serif;
-  padding-top: 51px;
+  padding-top: 75px;
+}
+
+.product-border {
+  border: 1px solid #ccc;
 }
 
 .producttitle {
@@ -18,7 +22,7 @@ body {
   text-align: center;
 }
 
-.productprice {
+.border {
   border-top: 1px solid #dadada;
   padding-top: 5px;
   font-weight: bold;
@@ -30,8 +34,8 @@ th {
 }
 
 .product-image {
-  max-width: 210px;
-  max-height: 140px;
+  width: 200px;
+  height: 180px;
   margin: auto;
   text-align: center;
 }
@@ -46,8 +50,11 @@ th {
 }
 
 .center {
-    margin: auto;
-    border: 1px solid blue;
+    margin: 0 auto;
     padding: 10px;
+}
+
+.button {
+    background-color: #ffffe6;
 }
 
