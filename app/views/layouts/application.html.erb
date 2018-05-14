@@ -4,10 +4,8 @@
   <title>Jay's Cameras</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
   </head>
@@ -25,29 +23,30 @@
         <a class="navbar-brand" href="/"><%= image_tag("JC_logo.png", class: "img-responsive logo") %>
         </a> <!--end projectName -->
       </div> <!--end navbar-header -->
-      <div class="navbar-collapse collapse">
-        <form class="navbar-form navbar-right" action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-          <div class="form-group">
-            <input id="q" class="form-control" type="text" name="q" />
-          </div>
-            <input type="submit" name="commit" value="Search" class="btn btn-primary" data-disable-with="Search" />
-        </form>       
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/">Home</a></li> 
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="/">Home</a></li>
             <li><a href="/products">Products</a></li>
             <li><a href="/orders">Orders</a></li>
             <li><a href="/simple_pages/about">About</a></li>
             <li><a href="/simple_pages/contact">Contact</a></li>
           </ul>
-      </div> <!-- end navbar-collaps -->
-    </div> <!-- end nav container-->
+          <ul class="nav navbar-nav navbar-right search-bar">  
+            <!-- Search Bar -->
+            <li>
+              <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+              <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control", placeholder: "What are you looking for?" %></li>
+            <li>
+              <%= form.submit 'Search', class: 'btn btn-success'%>
+              <% end %>
+            </li>
+          </ul>
   </nav>
 </body>
 
 <%= yield %>
 
 <footer class="site-footer">
-  <h4 class="footer=styling">&copy; Jay's Cameras 2018 jayscamera@gmail.com </h4>
+  <h4 class="footer=styling">&copy; Jay's Cameras 2018 jayscameras@gmail.com </h4>
 </footer>
 
 </html>

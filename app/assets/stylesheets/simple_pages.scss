@@ -8,6 +8,10 @@ html, body {
   height: 100%;
 }
 
+li {
+  float: right;
+}
+
 .logo {
   height: 100px;
   width: 130px;;
@@ -48,10 +52,10 @@ html, body {
     height: 100%;
 }
 
- @media screen and (max-width: 767px) {
-    h2 {
-    font-size: 0.8em;
-    }
+@media screen and (max-width: 767px) {
+  h2 {
+  font-size: 0.8em;
+  }
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -118,6 +122,10 @@ html, body {
 .carousel-caption {
   font-family: "Courier New";
   font-size: 2em;
+}
+
+.search-bar {
+  padding: 10px 15px;
 }
 
 

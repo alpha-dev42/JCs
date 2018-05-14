@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'simple_pages/contact'
 
-  root 'simple_pages#about'
+  root 'simple_pages#index'
   get 'simple_pages/index'
  
 
