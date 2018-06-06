@@ -57,18 +57,11 @@ h1 {
   color:white;
 }  
 
-.item {
-  display: block;
-  margin: 0 auto;
+// diplay orientation styling
+
+.anchor-bottom {
+  height: 200px;
 }
-
-
-
-.pagination {
-    display: block;
-}
-
-// Carousel Styling
 
 .carousel-image {
   text-align: center;
@@ -77,12 +70,16 @@ h1 {
         }
 }
 
-.anchor-bottom {
-  height: 200px;
+.item {
+  display: block;
+  margin: 0 auto;
+}
+
+.pagination {
+    display: block;
 }
 
 //Text Styling
-
 
 .nav {
   font-family: 'Open Sans', 'Della Respira';
@@ -152,6 +149,9 @@ h1 {
 
 // Log in page styling
 
+.actions {
+  margin-left: 20px;
+}
 #container {
   position: relative;
   width: 340px;
@@ -253,7 +253,6 @@ input[type=checkbox] {
 }
 
 input[type=submit] {
-  float: right;
   font-size: 14px;
   font-weight: bold;
   color: #fff;

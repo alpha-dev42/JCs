@@ -1,5 +1,5 @@
 
-<h1>Contact Me</h1>
+<h1>Contact Us</h1>
 
 <%= form_tag("/simple_pages/thank_you") do %>
   <div class="row">
@@ -16,7 +16,9 @@
         <%= label_tag :message %>
         <%= text_area(:message, "", class: "form-control", row: 5, placeholder: "Enter Message", required: "true") %> 
       </div>
+      <div class="actions">
       <%= submit_tag "Send" %>
+      </div>
     </div>
   </div>
 
