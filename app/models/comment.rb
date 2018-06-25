@@ -4,6 +4,8 @@ class Comment < ApplicationRecord
 
   # method for selecting comment with highest rating
   scope :rating_desc, -> { order(rating: :desc) }
+
+  # method for reverser order lowest rating
   scope :rating_asc, -> { order(rating: :asc) }
 
 end
