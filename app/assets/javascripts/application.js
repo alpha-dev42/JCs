@@ -11,13 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.raty.js
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery3
 //= require_tree .
+
 
 $(".alert" ).delay(1500);
 $(".alert" ).fadeOut(3000);
 
 $(".alert-success" ).delay(3000);
 $(".alert-success" ).fadeOut(3000);
+
