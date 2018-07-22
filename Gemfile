@@ -32,7 +32,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'coffee-script-source', '1.8.0'
 
-gem 'rake', '12.3.1' 
+gem 'rake', '12.3.1'
+
+# Pagination of Product Review Pages
+gem 'will_paginate', '~> 3.1.0' 
 
 
 group :development, :test do

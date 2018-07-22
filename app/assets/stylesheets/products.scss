@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-
   padding-top: 75px;
 }
 
@@ -40,6 +39,13 @@ th {
   text-align: center;
 }
 
+.product-display {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  text-align: center;
+}
+
 .productbox {
   width: 100vw;
   position: relative;
@@ -61,4 +67,26 @@ th {
 
 .product-styling {
   font-size: 1.5em;
+}
+
+.column-half {
+  float: left;
+  width: 50%;
+}
+
+#wrap {
+    float: left;
+    position: relative;
+}
+
+#content {
+    float: left;
+    position: relative;
+    left: -50%;
+}
+
+.product-info {
+    position: absolute;
+    top: 20%;
+    height: 30%;;
 }

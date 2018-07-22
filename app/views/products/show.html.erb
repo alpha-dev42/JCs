@@ -1,47 +1,52 @@
 <p id="notice"><%= notice %></p>
 
 <br>
-<br>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="row">
+  <div class="column-half">
+    <div class="product-display">
+      <%= image_tag @product.image_url, class:'img-responsive' %>
+    </div>
+  </div>
+  <div class="column-half">
+    <div class="product-info">
+        <p>
+        <strong>Name:</strong>
+        <%= @product.name %>
+        </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+        <p>
+          <strong>Description:</strong>
+          <%= @product.description %>
+        </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= image_tag @product.image_url, class:'img-responsive' %>
-</p>
+        <p>
+          <strong>Price: </strong>
+          $<%= @product.price %>
+        </p>
 
-<p>
-  <strong>Price: </strong>
-  $<%= @product.price %>
-</p>
+        <p>
+          <strong>Colour:</strong>
+          <%= @product.colour %>
+        </p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+        <p>
+          <strong>Highest Rating:</strong>
+        <%= @product.highest_rating_comment %>
+        </p>
 
-<p>
-  <strong>Highest Rating:</strong>
-<%= @product.highest_rating_comment %>
-</p>
+        <p>
+          <strong>Lowest Rating:</strong>
+        <%= @product.lowest_rating_comment %>
+        </p>
 
-<p>
-  <strong>Lowest Rating:</strong>
-<%= @product.lowest_rating_comment %>
-</p>
-
-<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
-
+        <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+      </div>  
+  </div>
+</div>
 <%= render 'new_comment' %>
 <%= render 'comments' %>
+<%= will_paginate @comments %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
