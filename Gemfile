@@ -29,7 +29,6 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
 gem 'coffee-script-source', '1.8.0'
 
 gem 'rake', '12.3.1'
@@ -37,6 +36,8 @@ gem 'rake', '12.3.1'
 # Pagination of Product Review Pages
 gem 'will_paginate', '~> 3.1.0' 
 
+# Gem for functional tests
+gem 'rails-controller-testing'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

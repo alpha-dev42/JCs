@@ -8,7 +8,7 @@ end
 
   resources :users
   resources :products do
-    resources :comments
+  resources :comments
   end  
   resources :orders, only: [:index, :show, :create, :destroy]
 
