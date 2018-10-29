@@ -44,6 +44,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.8'
+  gem "factory_bot_rails", "~>4.0"
 end
 
 group :development do
