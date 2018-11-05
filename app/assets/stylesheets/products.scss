@@ -56,13 +56,13 @@ th {
 }
 
 .center {
-    margin: 0 auto;
-    padding: 10px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .button {
-    background-color: #008CBA;
-    color: white;
+  background-color: #008CBA;
+  color: white;
 }
 
 .product-styling {
@@ -75,18 +75,22 @@ th {
 }
 
 #wrap {
-    float: left;
-    position: relative;
+  float: left;
+  position: relative;
 }
 
 #content {
-    float: left;
-    position: relative;
-    left: -50%;
+  float: left;
+  position: relative;
+  left: -50%;
 }
 
 .product-info {
-    position: absolute;
-    top: 20%;
-    height: 30%;;
+  position: absolute;
+  top: 20%;
+  height: 30%;
+}
+
+.product-reviews {
+  margin-left: 20px;
 }

@@ -1,6 +1,4 @@
-<div class="product-reviews">
-  <% @comments.each do |comment| %>
-    <div class="row">
+<% @comments.each do |comment| %>
       <p>
       	<%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
       	<% if signed_in? && current_user.admin? %>
@@ -8,8 +6,6 @@
         <% end %>
       </p>	
       <div class="rated" data-score="<%= comment.rating %>"></div>
-     
-    </div>   
+       
       <p><%= comment.body %></p>
-  <% end %>
-</div>
+<% end %>
