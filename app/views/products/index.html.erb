@@ -6,12 +6,13 @@
 		            
 		</div>
 	</div>
-<br>
-
-<% @products.each do |product| %>
-  <%= render partial: "shared/product", locals: {product: product} %>
-<% end %>
-<div class="row">
-</div>
+	<br>
+	<div class="container">
+	<% @products.each do |product| %>
+		<%= render partial: "shared/product", locals: {product: product} %>
+	<% end %>
+	</div>
+	<div class="row">
+	</div>
 
 </body>
