@@ -8,8 +8,9 @@ end
 
   resources :users
   resources :products do
-  resources :comments
+    resources :comments
   end  
+  resources :products
   resources :orders, only: [:index, :show, :create, :destroy]
 
   get 'simple_pages/about'
@@ -21,6 +22,8 @@ end
 
   # Thank you message after form submission
   post 'simple_pages/thank_you'
+
+  post 'payments/create'
 
 
  
