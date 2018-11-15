@@ -1,9 +1,17 @@
 <% @products.each do |product| %>
   <div class="col-sm-2 col-md-4">
       <strong><div class="producttitle"><%= link_to product.name, product, data: {mh: 'product-name'} %></div></strong>
-    <div class="product-desc"><p data-mh="product-description"><%= product.description %></p></div>
-    <div class="image-responsive product-image"> <%= image_tag product.image_url unless product.image_url.blank? %>
+      <% logger.debug "Product name is #{product.name}"%>
+      <div class="product-desc"><p data-mh="product-description"><%= product.description %></p></div>
+    < div class="image-responsive product-image"> <%= image_tag product.image_url unless product.image_url.blank? %>
     </div>
     <div class="productprice"><p class="product-price" data-mh="product-price">$<%= product.price %></p></div>
-  </div><!-- /col -->
+    <!-- link to create edit or delete products only available to admin -->
+
+    <% if signed_in? && current_user.admin? %>
+      <!-- <%= link_to 'Show', product %> -->
+      <%= link_to 'Edit', edit_product_path(product) %>
+      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
 <% end %> 
