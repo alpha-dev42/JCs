@@ -28,6 +28,9 @@ gem 'coffee-script-source', '1.8.0'
 
 gem 'rake', '12.3.1'
 
+# brakeman gem for security scanning
+gem "brakeman"
+
 # Pagination of Product Review Pages
 gem 'will_paginate', '~> 3.1.0' 
 
