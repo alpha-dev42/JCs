@@ -2,15 +2,30 @@
 
 <body>
 	<div class="container">
-		<div class="row col-xs-12">
-		            
-		</div>
+		<div class="row col-xs-12">            
+	</div>
 	</div>
 	<br>
 	<div class="container">
-	<% @products.each do |product| %>
-		<%= render partial: "shared/product", locals: {product: product} %>
-	<% end %>
+		<% if @products.length > 0 %>
+			<% cache(cache_key_for_products) do %>
+			<%= render @products %>
+			<% end %>
+		<% elsif params[:q] %>
+		<div class="sticky-top">
+			<p>No products matched your query for <strong>'<%= params[:q] %>'</strong>. Please try again!</p>
+			<div class="navbar">
+			<%= form_tag("/products", method: "get") do %>
+			<%= text_field_tag(:q, nil, id: 'q', value: params[:q], placeholder: "Find products...") %>
+			<%= submit_tag("Search", class: 'btn btn-danger') %>
+			<% end %>
+			</div>
+		<% else %>
+			<p>No products were found.</p>
+		<% end %>
+		<% @products.each do |product| %>
+			<%= render partial: "shared/product", locals: {product: product} %>
+		<% end %>
 	</div>
 	<div class="row">
 	</div>
