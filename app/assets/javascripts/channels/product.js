@@ -27,5 +27,3 @@ $(document).on('turbolinks:load', function() {
     App.product.listen_to_comments();
   }, 500);
 });
-
-console.log(data.comment.body);
